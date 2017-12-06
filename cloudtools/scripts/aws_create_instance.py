@@ -182,7 +182,6 @@ def create_instance(name, config, region, key_name, ssh_key, instance_data,
                      "retrying in %d sec ...", instance_data['hostname'], instance.id,
                      instance.private_ip_address, e, FAILURE_TIMEOUT)
             time.sleep(FAILURE_TIMEOUT)
-
         except:
             # any other exception
             log.warn("problem assimilating %s (%s, %s), retrying in "
